@@ -1,0 +1,11 @@
+# upstream (openbao-plugins/Containerfile) と同じ構成。
+# OpenBao の OCI プラグイン要件: バイナリをイメージのルートに置き、
+# ENTRYPOINT でバイナリ名を示す (binary_name 省略可能にするため)。
+FROM scratch
+LABEL org.opencontainers.image.title="openbao-plugin-secrets-ldap"
+LABEL org.opencontainers.image.description="Unofficial build of openbao-plugins secrets/ldap until upstream publishes a release"
+LABEL org.opencontainers.image.licenses="MPL-2.0"
+
+COPY openbao-plugin-secrets-ldap /openbao-plugin-secrets-ldap
+
+ENTRYPOINT ["/openbao-plugin-secrets-ldap"]

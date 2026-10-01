@@ -1,1 +1,4 @@
 /work/
+/dist/
+/upstream/
+/secrets-ldap/openbao-plugin-secrets-ldap
